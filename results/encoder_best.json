@@ -1,0 +1,85 @@
+{
+  "best_learned": {
+    "d_model": 32,
+    "n_heads": 2,
+    "n_layers": 1,
+    "pos_enc": "learned",
+    "n_params": 13826,
+    "best_val_acc": 0.9998,
+    "test_acc": 0.9997
+  },
+  "best_rope": {
+    "d_model": 32,
+    "n_heads": 2,
+    "n_layers": 1,
+    "pos_enc": "rope",
+    "n_params": 13570,
+    "best_val_acc": 0.9995,
+    "test_acc": 0.9995
+  },
+  "all_results": [
+    {
+      "d_model": 32,
+      "n_heads": 2,
+      "n_layers": 1,
+      "pos_enc": "none",
+      "n_params": 13570,
+      "best_val_acc": 0.8572,
+      "test_acc": 0.8558
+    },
+    {
+      "d_model": 32,
+      "n_heads": 2,
+      "n_layers": 2,
+      "pos_enc": "none",
+      "n_params": 26274,
+      "best_val_acc": 0.8607,
+      "test_acc": 0.8596
+    },
+    {
+      "d_model": 32,
+      "n_heads": 2,
+      "n_layers": 1,
+      "pos_enc": "learned",
+      "n_params": 13826,
+      "best_val_acc": 0.9998,
+      "test_acc": 0.9997
+    },
+    {
+      "d_model": 32,
+      "n_heads": 2,
+      "n_layers": 2,
+      "pos_enc": "learned",
+      "n_params": 26530,
+      "best_val_acc": 0.9999,
+      "test_acc": 0.9999
+    },
+    {
+      "d_model": 64,
+      "n_heads": 4,
+      "n_layers": 1,
+      "pos_enc": "learned",
+      "n_params": 52226,
+      "best_val_acc": 0.9999,
+      "test_acc": 0.9999
+    },
+    {
+      "d_model": 64,
+      "n_heads": 4,
+      "n_layers": 2,
+      "pos_enc": "learned",
+      "n_params": 102210,
+      "best_val_acc": 0.9998,
+      "test_acc": 0.9998
+    },
+    {
+      "d_model": 32,
+      "n_heads": 2,
+      "n_layers": 1,
+      "pos_enc": "rope",
+      "n_params": 13570,
+      "best_val_acc": 0.9995,
+      "test_acc": 0.9995
+    }
+  ]
+}

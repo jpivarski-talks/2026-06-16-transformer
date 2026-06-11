@@ -1,0 +1,5 @@
+.ipynb_checkpoints/
+.jupyter/
+.jupyter_ystore.db
+__pycache__/
+*~
