@@ -23,6 +23,8 @@ COLORS = {
     "Meta":             "#e85d04",  # vivid orange  (new)
     "DeepSeek":         "#7b2fbe",  # purple        (new)
     "xAI":              "#888888",  # grey          (new)
+    "Alibaba":          "#e91e8c",  # deep pink     (new)
+    "Mistral":          "#2ec4b6",  # teal-turquoise (new)
 }
 
 # ── Model data ────────────────────────────────────────────────────────────────
@@ -72,10 +74,22 @@ MODELS = [
     ("Meta",             "Meta\nLlama 4",                   2025+3/12,    400,    False,  2026.1,  560),
     # Claude Opus 4: estimated ~1.9 T – upper right
     ("Anthropic",        "Anthropic\nClaude Opus 4",        2025+4/12,    1875,   False,  2026.2,  2200),
+
+    # ── additional 2025-2026 models ──────────────────────────────────────────
+    # Qwen3-235B: 235 B total (22 B active MoE), confirmed by Alibaba, Apr 2025
+    ("Alibaba",          "Alibaba\nQwen3 235B",              2025+3/12,    235,    False,  2025.0,  130),
+    # Mistral Large 3: 675 B total (41 B active MoE), confirmed, Dec 2025
+    ("Mistral",          "Mistral\nLarge 3",                 2025+11/12,   675,    False,  2026.25, 850),
+    # GPT-5: OpenAI, Aug 2025; params not disclosed; industry estimate ~3 T
+    ("OpenAI",           "OpenAI\nGPT-5",                   2025+7/12,    3000,   False,  2025.85, 3600),
+    # GPT-5.5: OpenAI, Apr 2026; params not disclosed; estimate ~4.5 T
+    ("OpenAI",           "OpenAI\nGPT-5.5",                 2026+3/12,    4500,   False,  2026.45, 4800),
+    # Claude Fable 5: Anthropic, Jun 2026; params not disclosed; estimate ~5 T
+    ("Anthropic",        "Anthropic\nClaude Fable 5",       2026+5/12,    5000,   False,  2026.6,  5300),
 ]
 
 # ── Figure ────────────────────────────────────────────────────────────────────
-fig, ax = plt.subplots(figsize=(12.0, 4.50))
+fig, ax = plt.subplots(figsize=(12.5, 5.20))
 fig.patch.set_facecolor("white")
 ax.set_facecolor("white")
 
@@ -117,14 +131,14 @@ for company, label, year, params, vert, lx, ly in MODELS:
         )
 
 # ── Axes ──────────────────────────────────────────────────────────────────────
-ax.set_xlim(2017.8, 2027.5)
+ax.set_xlim(2017.8, 2028.0)
 ax.set_xticks(range(2018, 2027))
 ax.set_xticklabels([str(y) for y in range(2018, 2027)],
                    fontsize=9, fontfamily="DejaVu Sans")
 
-ax.set_ylim(0, 3500)
-ax.set_yticks([0, 500, 1000, 1500, 2000, 2500, 3000, 3500])
-ax.set_yticklabels(["0", "500", "1000", "1500", "2000", "2500", "3000", "3500"],
+ax.set_ylim(0, 6000)
+ax.set_yticks([0, 1000, 2000, 3000, 4000, 5000, 6000])
+ax.set_yticklabels(["0", "1000", "2000", "3000", "4000", "5000", "6000"],
                    fontsize=9, fontfamily="DejaVu Sans")
 ax.set_ylabel("billions of parameters", fontsize=9, fontfamily="DejaVu Sans")
 
